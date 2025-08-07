@@ -20,3 +20,6 @@
   "author": "Your Name",
   "license": "MIT"
 }
+"scripts": {
+  "start": "node server.js"
+}
