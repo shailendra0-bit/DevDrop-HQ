@@ -1,0 +1,30 @@
+# Node modules
+node_modules/
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+
+# Environment files
+.env
+
+# Uploaded files (users' uploads)
+uploads/
+
+# JSON "DB" files (user and file data — sensitive)
+users.json
+files.json
+
+# OS metadata
+*.swp
+
+# VS Code settings
+.vscode/
+
+# Build artifacts
+dist/
