@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Devdrop login</title>
+    <style>
+        body {
+            height: 50% fixed;
+            width: 90%;
+            background: #ffffff;                        
+            margin: 5%,5%;
+            padding: 2%;
+            position: fixed center;
+            overflow: fixed;
+            background: #8098ff53;
+        }
+        input {
+            width: 65%;
+            border: 0;
+            margin: 6% 5%;
+            border-radius: 40px;
+            position: centre;
+            background: #c3c3c372;
+        }
+        button {
+            border: 0;
+            background: #5cff4053;
+        }
+    </style>
+</head>
+<body>
+       <form action="/login" method="POST">
+  <input name="username" placeholder="Username" required>
+  <button type="submit">Login</button>
+  <input name="password" type="password" placeholder="Password" required>
+      </form>
+</body>
+</html>

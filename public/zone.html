@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Global Vault - DevDrop HQ</title>
+  <style>
+        body {
+            background: #ffd2953b;
+            color: #000000;
+            margin: 5%;
+            border: 1px solid;
+            border-radius: 2px;
+        }
+  </style>
+</head>
+<body>
+  <h1>📁 Shared Tools Vault</h1>
+  <div id="file-list">Loading files...</div>
+  <script>
+    async function loadFiles() {
+      const res = await fetch('/files');
+      const files = await res.json();
+      const list = document.getElementById('file-list');
+      if (files.length === 0) return list.innerHTML = '<p>No files yet.</p>';
+      list.innerHTML = '';
+      files.forEach(f => {
+        const div = document.createElement('div');
+        div.innerHTML = `
+          <a href="/uploads/${f.filename}" download>${f.filename}</a>
+          <a href="/preview/${f.filename}">Preview</a>
+        `;
+        list.appendChild(div);
+      });
+    }
+    loadFiles();
+  </script>
+</body>
+</html>
