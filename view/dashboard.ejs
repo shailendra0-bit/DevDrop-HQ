@@ -1,0 +1,18 @@
+<h1>Welcome, <%= user %></h1>
+<form action="/upload" method="POST" enctype="multipart/form-data">
+  <input type="file" name="devfile" required>
+  <button type="submit">Upload Tool</button>
+</form>
+<h2>Your Files:</h2>
+<ul>
+  <% files.forEach(f => { %>
+    <li>
+      <a href="/uploads/<%= f.filename %>" download><%= f.filename %></a> |
+      <a href="/preview/<%= f.filename %>">Preview</a> |
+      <form action="/delete/<%= f.filename %>" method="POST" style="display:inline;">
+        <button type="submit">Delete</button>
+      </form>
+    </li>
+  <% }) %>
+</ul>
+<a href="/logout">Logout</a>
