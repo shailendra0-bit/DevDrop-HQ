@@ -1,0 +1,22 @@
+{
+  "name": "devdrop-hq",
+  "version": "1.0.0",
+  "description": "Secure file upload platform for developers and hackers.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "bcrypt": "^5.1.0",
+    "ejs": "^3.1.9",
+    "express": "^4.19.2",
+    "express-session": "^1.17.3",
+    "multer": "^1.4.5"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "keywords": ["express", "file-upload", "devdrop", "hacker", "ejs"],
+  "author": "Your Name",
+  "license": "MIT"
+}
