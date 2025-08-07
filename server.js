@@ -137,3 +137,6 @@ app.get('/preview/:filename', checkAuth, (req, res) => {
 app.listen(PORT, () =>
   console.log(`🚀 DevDrop HQ running at http://localhost:${PORT}`)
 );
+const uploadFolder = path.join(__dirname, 'uploads');
+if (!fs.existsSync(uploadFolder)) fs.mkdirSync(uploadFolder);
+        
